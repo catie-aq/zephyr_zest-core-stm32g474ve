@@ -1,0 +1,7 @@
+# Zest Core STM32G474VE board configuration
+# Copyright (c) 2023 CATIE
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_ZEST_CORE_STM32G474VE
+	bool "Zest Core STM32G474VE Development Board"
+	depends on SOC_STM32G474XX
