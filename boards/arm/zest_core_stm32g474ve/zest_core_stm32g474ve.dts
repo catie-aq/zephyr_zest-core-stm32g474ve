@@ -76,45 +76,49 @@
 	status = "okay";
 };
 
+// ========== 6tron BUS =============
+// The following list all available zephyr supported modules using standard 6tron bus pin names.
+// Be aware that these module are disabled by default, and need to be enable in your "app.overlay".
+
 &i2c3 {
 	pinctrl-0 = <&i2c3_scl_pc8 &i2c3_sda_pc9>;
 	pinctrl-names = "default";
-	status = "okay";
+	status = "disabled";
 };
 
 &usart2 {
 	pinctrl-0 = <&usart2_tx_pa2 &usart2_rx_pa3>;
 	pinctrl-names = "default";
 	current-speed = <115200>;
-	status = "okay";
+	status = "disabled";
 };
 
 &spi1 {
 	pinctrl-0 = <&spi1_sck_pa5 &spi1_miso_pa6 &spi1_mosi_pb5>;
 	pinctrl-names = "default";
 	cs-gpios = <&gpiob 2 GPIO_ACTIVE_LOW>;
-	status = "okay";
+	status = "disabled";
 };
 
 //! pwm1 not supported on zest core stm32g474ve v1.0.0 !
 
 &timers15 {
-	status = "okay";
+	status = "disabled";
 
 	pwm2: pwm {
 		pinctrl-0 = <&tim15_ch1_pb14>;
 		pinctrl-names = "default";
-		status = "okay";
+		status = "disabled";
 	};
 };
 
 &timers3 {
-	status = "okay";
+	status = "disabled";
 
 	pwm3: pwm {
 		pinctrl-0 = <&tim3_ch1_pc6>;
 		pinctrl-names = "default";
-		status = "okay";
+		status = "disabled";
 	};
 };
 
@@ -123,7 +127,7 @@
 	pinctrl-names = "default";
 	st,adc-clock-source = <SYNC>;
 	st,adc-prescaler = <4>;
-	status = "okay";
+	status = "disabled";
 };
 
 &adc3 {
@@ -131,11 +135,11 @@
 	pinctrl-names = "default";
 	st,adc-clock-source = <SYNC>;
 	st,adc-prescaler = <4>;
-	status = "okay";
+	status = "disabled";
 };
 
 &dac1 {
 	pinctrl-0 = <&dac1_out1_pa4>;
 	pinctrl-names = "default";
-	status = "okay";
+	status = "disabled";
 };
