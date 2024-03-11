@@ -80,6 +80,14 @@
 // The following list all available zephyr supported modules using standard 6tron bus pin names.
 // Be aware that these module are disabled by default, and need to be enable in your "app.overlay".
 
+&fdcan3 {
+	pinctrl-0 = <&fdcan3_tx_pb4 &fdcan3_rx_pa8>;
+	pinctrl-names = "default";
+	bus-speed = <1000000>;
+	bus-speed-data = <1000000>;
+	status = "disabled";
+};
+
 &i2c3 {
 	pinctrl-0 = <&i2c3_scl_pc8 &i2c3_sda_pc9>;
 	pinctrl-names = "default";
