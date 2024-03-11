@@ -74,6 +74,7 @@ sixtron_connector_1_can: &fdcan3 {};
 sixtron_connector_1_i2c: &i2c3 {};
 sixtron_connector_1_uart: &usart2 {};
 sixtron_connector_1_spi: &spi1 {};
+//sixtron_connector_1_pwm: &timer1 {}; // not the same Timer for the three pins !
 //sixtron_connector_1_adc: &adc1 {}; // not the same ADC for the four pins !
 sixtron_connector_1_dac: &dac1 {};
 
@@ -81,5 +82,6 @@ sixtron_can: &sixtron_connector_1_can {};
 sixtron_i2c: &sixtron_connector_1_i2c {};
 sixtron_uart: &sixtron_connector_1_uart {};
 sixtron_spi: &sixtron_connector_1_spi {};
+//sixtron_pwm: &sixtron_connector_1_pwm {};
 //sixtron_adc: &sixtron_connector_1_adc {};
 sixtron_dac: &sixtron_connector_1_dac {};
