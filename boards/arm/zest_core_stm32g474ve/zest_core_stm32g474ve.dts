@@ -43,10 +43,14 @@
 };
 
 // The Zest_Core_STM2G474VE has an external 24Mhz HSE oscillator available.
-
 &clk_hse{
 	status = "okay";
 	clock-frequency = <DT_FREQ_M(24)>;
+};
+
+// For USB support, HSI48 need to be enable
+&clk_hsi48 {
+	status = "okay";
 };
 
 // For PLL supported values in Zephyr, see files :
@@ -56,8 +60,8 @@
 &pll {
 	div-m = <6>;  // 24/6  = 4Mhz
 	mul-n = <85>; // 4*85  = 340Mhz
-	div-p = <2>;  // 340/2 = 170Mhz for PLLQ
-	div-q = <2>;  // 340/2 = 170Mhz for PLLP
+	div-p = <2>;  // 340/2 = 170Mhz for PLLP
+	div-q = <2>;  // 340/2 = 170Mhz for PLLQ
 	div-r = <2>;  // 340/2 = 170Mhz for RCC
 	clocks = <&clk_hse>;
 	status = "okay";
@@ -75,6 +79,13 @@
 	pinctrl-0 = <&usart3_tx_pb10 &usart3_rx_pb11>;
 	pinctrl-names = "default";
 	current-speed = <115200>;
+	status = "okay";
+};
+
+// Enable the usb to get CDC ACM working (uart over USB)
+zephyr_udc0: &usb {
+	pinctrl-0 = <&usb_dm_pa11 &usb_dp_pa12>;
+	pinctrl-names = "default";
 	status = "okay";
 };
 
