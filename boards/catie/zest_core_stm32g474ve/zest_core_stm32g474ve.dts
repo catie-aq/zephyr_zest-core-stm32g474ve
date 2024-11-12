@@ -7,6 +7,7 @@
 /dts-v1/;
 #include <st/g4/stm32g474Xe.dtsi>
 #include <st/g4/stm32g474v(b-c-e)tx-pinctrl.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "sixtron_connector.dtsi"
 
 / {
@@ -33,6 +34,7 @@
 		user_button: button {
 			label = "User Button";
 			gpios = <&gpiob 8 GPIO_ACTIVE_HIGH>;
+			zephyr,code = <INPUT_BTN_0>;
 		};
 	};
 
