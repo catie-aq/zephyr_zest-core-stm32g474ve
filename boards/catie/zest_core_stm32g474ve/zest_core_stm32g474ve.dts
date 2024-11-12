@@ -32,7 +32,7 @@
 		compatible = "gpio-keys";
 		user_button: button {
 			label = "User Button";
-			gpios = <&gpiob 8 GPIO_ACTIVE_LOW>;
+			gpios = <&gpiob 8 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
