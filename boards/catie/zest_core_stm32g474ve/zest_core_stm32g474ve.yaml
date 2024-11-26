@@ -1,0 +1,19 @@
+identifier: zest_core_stm32g474ve
+name: Zest_Core_STM32G474VE
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 128
+flash: 512
+supported:
+  - pwm
+  - i2c
+  - gpio
+  - counter
+  - spi
+  - dma
+  - can
+  - rtc
+vendor: catie
