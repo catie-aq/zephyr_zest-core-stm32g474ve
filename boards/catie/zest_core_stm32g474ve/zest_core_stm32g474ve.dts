@@ -100,8 +100,8 @@ zephyr_udc0: &usb {
 			 <&rcc STM32_SRC_HSE FDCAN_SEL(0)>;
 	pinctrl-0 = <&fdcan3_tx_pb4 &fdcan3_rx_pa8>;
 	pinctrl-names = "default";
-	bus-speed = <125000>;
-	bus-speed-data = <1000000>;
+	bitrate = <125000>;
+	bitrate-data = <1000000>;
 	status = "disabled";
 };
 
