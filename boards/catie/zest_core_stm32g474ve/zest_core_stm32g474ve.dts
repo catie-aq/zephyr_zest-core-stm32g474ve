@@ -128,22 +128,35 @@ zephyr_udc0: &usb {
 //! pwm1 not supported on zest core stm32g474ve v1.0.0 !
 
 &timers15 {
-	status = "disabled";
+	status = "okay";
+	st,prescaler = <2>;
 
-	pwm2: pwm {
+	pwm15: pwm {
+		status = "okay";
 		pinctrl-0 = <&tim15_ch1_pb14>;
 		pinctrl-names = "default";
-		status = "disabled";
 	};
 };
 
 &timers3 {
-	status = "disabled";
+	status = "okay";
+	st,prescaler = <2>;
 
 	pwm3: pwm {
+		status = "okay";
 		pinctrl-0 = <&tim3_ch1_pc6>;
 		pinctrl-names = "default";
-		status = "disabled";
+	};
+};
+
+&timers4 {
+	status = "okay";
+	st,prescaler = <2>;
+
+	pwm4: pwm {
+		status = "okay";
+		pinctrl-0 = <&tim4_ch1_pd12>;
+		pinctrl-names = "default";
 	};
 };
 
