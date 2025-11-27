@@ -96,7 +96,7 @@ zephyr_udc0: &usb {
 // Be aware that these module are disabled by default, and need to be enable in your "app.overlay".
 
 &fdcan3 {
-	clocks = <&rcc STM32_CLOCK_BUS_APB1 0x02000000>,
+	clocks = <&rcc STM32_CLOCK(APB1, 25)>,
 			 <&rcc STM32_SRC_HSE FDCAN_SEL(0)>;
 	pinctrl-0 = <&fdcan3_tx_pb4 &fdcan3_rx_pa8>;
 	pinctrl-names = "default";
