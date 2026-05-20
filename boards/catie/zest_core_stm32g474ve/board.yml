@@ -1,5 +1,6 @@
 board:
   name: zest_core_stm32g474ve
+  full_name: Zest_Core_STM32G474VE
   vendor: catie
   socs:
     - name: stm32g474xx
